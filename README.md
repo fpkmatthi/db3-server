@@ -36,6 +36,8 @@ vagrant up
 After launching the box you can connect to the mongodb instance by setting up
 a connection for **localhost:27017**.
 
+**TODO:** exec jupyter on startup, temp solution is to provision on each boot
+
 Jupyter is configured to launch in the synced_folders dir.
 After provisioning you will see a link. You can copy pasta the link directing to localhost into 
 your webbrowser to open the Jupyter workspace.

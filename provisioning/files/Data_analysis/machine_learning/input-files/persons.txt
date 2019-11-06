@@ -1,0 +1,9 @@
+gender;height;weight;footsize
+male;183;81.5;46
+male;180;86;45
+male;170;77;46
+male;180;75;44
+female;152.5;45;38
+female;167.5;68;40
+female;165;59;39
+female;175;68;42

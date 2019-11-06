@@ -1,0 +1,6 @@
+Om de Jupyter Notebook gemakkelijk te kunnen openen bijvoorbeeld vanuit de map D:\Databanken 3
+•	Start de Anaconda prompt
+•	Geef het volgende commando in
+jupyter notebook --notebook-dir "D:\Databanken 3"
+
+Belangrijk! Er moet tenminste één Jupyter Notebook in deze nieuwe directory staan, anders krijg je een fout.

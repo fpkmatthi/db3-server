@@ -1,0 +1,121 @@
+" Title: vimrc
+
+so $HOME/.vim/plugins.vim
+so $HOME/.vim/shortcuts.vim
+
+
+" Options {{{
+set autochdir
+set breakindent
+set conceallevel=2
+set cursorline
+set encoding=utf-8
+set expandtab
+set foldmethod=marker
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set lazyredraw
+set linebreak
+set list
+set listchars=tab:▶▬
+set mouse=
+set noruler
+set noshowmode
+set nrformats-=octal
+set number relativenumber
+set scrolloff=5
+set shiftwidth=4
+set shortmess=F
+set showbreak=↪\
+set showcmd
+set showmatch
+set smartcase
+set smarttab
+set softtabstop=4
+set splitbelow
+set splitright
+set t_Co=256
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
+set undodir=~/.vim/undodir
+set undofile
+set viminfo+=n~/.vim/viminfo
+set wildmenu
+set wrap
+syntax on
+highlight LineNr ctermbg=None
+highlight CursorLine ctermbg=None
+highlight CursorLine cterm=Underline
+highlight CursorLineNr ctermbg=None
+" }}}
+
+" Mappings {{{
+" Make window handeling easier {{{
+" map <leader>w- <C-W>- " decrement height
+" map <leader>w+ <C-W>+ " increment height
+" map <leader>wm <C-W>_ " maximize height
+" map <leader>w= <C-W>= " equalize all windows
+" }}}
+
+" Make tab handeling easier {{{
+noremap <leader>& 1gt
+noremap <leader>é 2gt
+noremap <leader>" 3gt
+noremap <leader>' 4gt
+noremap <leader>( 5gt
+noremap <leader>§ 6gt
+noremap <leader>è 7gt
+noremap <leader>! 8gt
+noremap <leader>ç 9gt
+" noremap <leader>à :tablast<cr>
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>th :tabnext<CR>
+nnoremap <leader>tl :tabprev<CR>
+nnoremap <leader>tq :tabclose<CR>
+" }}}
+
+" Make window splitting easier {{{
+" map <leader>; <C-W>h
+" map <leader>` <C-W>v
+" }}}
+
+" autocmd Filetype markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType sh,ruby,yaml,zsh,vim setlocal shiftwidth=2 tabstop=2 expandtab
+au BufNewFile,Bufread *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+" specify syntax highlighting for specific files
+" autocmd Bufread,BufNewFile *.md set filetype=markdown 
+
+" Remove highlighting after search
+" map <leader>h :noih<cr>
+
+" Reset spelling colours when reading a new buffer
+" This works around an issue where the colorscheme is changed by .local.vimrc
+" fun! SetSpellingColors()
+" highlight SpellBad cterm=bold ctermfg=white ctermbg=red
+" highlight SpellCap cterm=bold ctermfg=red ctermbg=white
+" endfun
+" autocmd BufWinEnter * call SetSpellingColors()
+" autocmd BufNewFile * call SetSpellingColors()
+" autocmd BufRead * call SetSpellingColors()
+" autocmd InsertEnter * call SetSpellingColors()
+" autocmd InsertLeave * call SetSpellingColors()
+
+" Close all folds when opening a new buffer
+" autocmd BufRead * setlocal foldmethod=marker
+" autocmd BufRead * normal zM
+
+
+
+" }}}
+
+" FileType recognition {{{
+" let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+" }}}

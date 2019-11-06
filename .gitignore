@@ -1,0 +1,6 @@
+
+provisioning/files/dotfiles/.vim/plugged/
+
+provisioning/files/dotfiles/.vim/undodir/
+
+.vagrant/

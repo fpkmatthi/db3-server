@@ -45,3 +45,10 @@ your webbrowser to open the Jupyter workspace.
 e.g.  http://127.0.0.1:8888/?token=69d1b9...
 
 **NOTE:** just going to 127.0.0.1:8888 might work too.
+
+If you didn't use the link with the token and it prompts you to login, you can retrieve the token
+by ssh-ing into the server and executing
+
+```Bash
+cat /home/vagrant/conda.log
+```

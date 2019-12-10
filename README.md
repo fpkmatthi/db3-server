@@ -50,5 +50,16 @@ If you didn't use the link with the token and it prompts you to login, you can r
 by ssh-ing into the server and executing
 
 ```Bash
+./launch_jupyter_notebook.sh
 cat /home/vagrant/conda.log
+```
+
+
+If you want to install packages via conda
+```Bash
+eval "$("/home/vagrant/anaconda3/bin/conda" shell.zsh hook)"
+conda install -y -c conda-forge keras
+conda install -y -c conda-forge keras-applications
+conda install -y -c conda-forge keras-preprocessing
+conda install -y -c anaconda keras-base
 ```

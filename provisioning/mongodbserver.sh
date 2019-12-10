@@ -112,8 +112,8 @@ conda list
 jupyter notebook --ip=0.0.0.0 --notebook-dir=/vagrant/provisioning/files/notebooks > conda.log 2>&1 &
 #cat > "/home/${USERNAME}/launch_jupyter_notebook.sh" << EOF
 ##!/bin/sh
-#eval "$("/home/${USERNAME}/anaconda3/bin/conda" shell.zsh hook)"
-#conda init
+# eval "$("/home/${USERNAME}/anaconda3/bin/conda" shell.zsh hook)"
+# conda init
 #export PATH="/usr/local/anaconda/bin:$PATH"
 #jupyter notebook --ip=0.0.0.0 --notebook-dir=/vagrant/provisioning/files/notebooks > conda.log 2>&1 &
 #EOF
